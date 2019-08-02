@@ -1,0 +1,9 @@
+<!-- message.wxml -->
+<view>
+    <van-notice-bar
+    left-icon="/images/notice.png"
+    text="v1.0.0版即将发布，敬请期待 v1.0.0版即将发布，敬请期待 v1.0.0版即将发布，敬请期待"
+    />
+    <text>消息公告</text>
+    <text>v1.0.0版即将发布，敬请期待</text>
+</view>

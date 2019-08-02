@@ -1,0 +1,35 @@
+<!--components/area.wxml-->
+<view>
+    <view class="btn">
+        <label bindtap='cancel'>取消</label>
+        <label bindtap='confirm'>确定</label>
+    </view>
+    <!-- <picker-view
+        wx:if=
+        indicator-style="height: 50px;"
+        style="width: 100%; height: 250px;"
+        value="{{value}}"
+        bindchange="bindChange"
+    >
+        <picker-view-column>
+        <view wx:for="{{ province }}" wx:key="{{ item.id }}" style="line-height: 50px">{{ item.name }}</view>
+        </picker-view-column>
+    </picker-view> -->
+
+    <picker-view
+        indicator-style="height: 50px;"
+        style="width: 100%; height: 250px;"
+        value="{{value}}"
+        bindchange="bindChange"
+    >
+        <picker-view-column>
+        <view wx:for="{{ province }}" wx:key="{{ item.id }}" style="line-height: 50px">{{ item.name }}</view>
+        </picker-view-column>
+        <picker-view-column>
+        <view wx:for="{{ city }}" wx:key="{{ index }}" style="line-height: 50px">{{ item }}</view>
+        </picker-view-column>
+        <picker-view-column class="school">
+        <view wx:for="{{ school }}" wx:key="{{ item.id }}" style="line-height: 50px">{{ item.name }}</view>
+        </picker-view-column>
+    </picker-view>
+</view>

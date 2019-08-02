@@ -1,0 +1,70 @@
+<!--pages/change/change.wxml-->
+<view>
+    <van-nav-bar
+        title="{{ title }}"
+        left-text="返回"
+        left-arrow
+        bind:click-left="onClickLeft"
+        title-class="nav-bar"
+    />
+    <!-- 修改手机号码 -->
+    <view wx:if="{{ pageType === 'phone' || pageType === 'email' }}">
+        <van-cell-group>
+            <van-field
+                value="{{ value }}"
+                label="{{ label }}"
+                maxlength="{{ pageType === 'phone' ? '11' : '30' }}"
+                placeholder="{{ placeholder }}"
+                error-message="{{ errMsg }}"
+                border="true"
+                clearable
+                bind:input="checkPhone"
+                bind:blur="getValue"
+            />
+            <van-field
+                value="{{ sms }}"
+                center
+                clearable
+                maxlength="6"
+                disabled="{{ isDisabled }}"
+                label="短信验证码"
+                placeholder="请输入短信验证码"
+                border="true"
+                use-button-slot="true"
+                bind:blur="getSms"
+            >
+                <van-button
+                    slot="button"
+                    size="small"
+                    type="primary"
+                    disabled="{{ isDisabled }}"
+                    showText="true"
+                    duration="60"
+                    text="获取验证码"
+                    >
+                    </van-button>
+            </van-field>
+        </van-cell-group>
+    </view>
+    <view wx:elif="{{ pageType === 'address' }}">
+        <van-cell
+            title="地址"
+            value="{{ address }}"
+            icon="location-o"
+            map="true"
+            title-class="title"
+            value-class="value"
+            bind:click="getAddress"
+            is-link
+        />
+        <van-cell-group>
+            <van-field
+                value="{{ houseNumber }}"
+                label="宿舍号"
+                left-icon="home-o"
+                border="true"
+            />
+        </van-cell-group>
+    </view>
+    <button class="save-btn confirm-btn" bindtap='confirmBtn' type="primary">保存</button>
+</view>

@@ -1,0 +1,60 @@
+<!--logs.wxml-->
+<view class="">
+   <view class="user-info">
+      <image class="user-image" src="{{userInfo.avatarUrl}}" mode="aspectFit"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+    <view bindtap="goPage">
+        <van-cell
+            title="性别"
+            value="{{ sex }}"
+            size="large"
+            icon="friends-o"
+            is-link
+        />
+        <van-cell
+            title="学校"
+            value="{{ school }}"
+            size="large"
+            icon="hotel-o"
+            bind:click="onOpen"
+            is-link
+        />
+        <van-cell
+            title="手机"
+            value="{{ phone }}"
+            size="large"
+            id="phone"
+            icon="phone-o"
+            is-link
+        />
+        <van-cell
+            title="邮箱"
+            value="{{ email }}"
+            size="large"
+            id="email"
+            icon="free-postage"
+            is-link
+        />
+        <van-cell
+            title="收货地址"
+            value="{{ address }}"
+            size="large"
+            id="address"
+            title-class="title"
+            icon="location-o"
+            is-link
+        />
+    </view>
+    <van-popup
+        show="{{ show }}"
+        position="bottom"
+        bind:close="onClose"
+    >
+    <area
+        bind:getschool="getSchool"
+        bind:cancel="canSel"
+    />
+    </van-popup>
+    <button class="save-btn" type="primary">保存修改</button>
+</view>

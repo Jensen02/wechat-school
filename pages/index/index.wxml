@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="">
+    <swiper
+        class="banner"
+        indicator-dots="true"
+        autoplay="true"
+        circular="true"
+        easing-function="linear"
+    >
+        <block wx:for="{{imgUrls}}" wx:key="{{ key }}">
+            <swiper-item>
+            <image src="{{item}}" class="slide-image" width="355" height="150" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="usermotto">
+        <view class="select-item" bindtap='showMessage'>
+            <view class="item-img">
+                <image
+                    src="/images/banner/collect.png"
+                    mode='aspectFit'
+                ></image>
+            </view>
+            <view class="item-text"><text>取件</text></view>
+        </view>  
+        <view class="select-item" bindtap='showMessage'>
+            <view class="item-img">
+                <image
+                    src="/images/banner/quick.png"
+                    mode='aspectFit'
+                ></image>
+            </view>
+            <view class="item-text"><text>帮帮取</text></view>
+        </view>
+        <view class="select-item" bindtap='showMessage'>
+            <view class="item-img">
+                <image
+                    src="/images/banner/old.png"
+                    mode='aspectFit'
+                ></image>
+            </view>
+            <view class="item-text"><text>二手市场</text></view>
+        </view>
+        <view class="select-item" bindtap='showMessage'>
+            <view class="item-img">
+                <image
+                    src="/images/banner/sender.png"
+                    mode='aspectFit'
+                ></image>
+            </view>
+            <view class="item-text"><text>寄件</text></view>
+        </view>
+        <view class="select-item" bindtap='showMessage'>
+            <view class="item-img">
+                <image
+                    src="/images/banner/love.png"
+                    mode='aspectFit'
+                ></image>
+            </view>
+            <view class="item-text"><text>表白墙</text></view>
+        </view>      
+    </view>
+</view>

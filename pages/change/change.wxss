@@ -1,0 +1,16 @@
+/* pages/change/change.wxss */
+.nav-bar {
+    color: #fff;
+}
+.confirm-btn {
+    width: 90%;
+    margin-top: 120rpx;
+}
+.title {
+    max-width: 90px;
+}
+.value {
+    text-align: left;
+    color: #333;
+    flex: 1;
+}

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "usingComponents": {
+      "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
+      "van-area": "/miniprogram_npm/vant-weapp/area/index",
+      "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
+      "area": "/components/area"
+   },
+  "backgroundColor": "#e1e1e1"
+}

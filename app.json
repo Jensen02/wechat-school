@@ -1,0 +1,51 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/person/person",
+        "pages/order/order",
+        "pages/message/message",
+        "pages/change/change"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#14b83c",
+        "navigationBarTitleText": "一站到邸",
+        "navigationBarTextStyle": "white"
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    },
+    "tabBar": {
+        "selectedColor": "#09bb07",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "text": "首页",
+                "selectedIconPath": "images/icon_home_select.png",
+                "iconPath": "images/icon_home.png",
+                "pagePath": "pages/index/index"
+            },
+            {
+                "text": "订单",
+                "selectedIconPath": "images/icon_dd_select.png",
+                "iconPath": "images/icon_dd.png",
+                "pagePath": "pages/order/order"
+            },
+            {
+                "text": "消息",
+                "selectedIconPath": "images/icon_message_select.png",
+                "iconPath": "images/icon_message.png",
+                "pagePath": "pages/message/message"
+            },
+            {
+                "text": "个人中心",
+                "selectedIconPath": "images/icon_person_select.png",
+                "iconPath": "images/icon_person.png",
+                "pagePath": "pages/person/person"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

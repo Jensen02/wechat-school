@@ -1,0 +1,12 @@
+<!-- order.wxml -->
+<view>
+    <van-tabs color="#09bb07" animated>
+        <van-tab title="待收件">待收件</van-tab>
+        <van-tab title="待评价">待评价</van-tab>
+        <van-tab title="我的订单">我的订单</van-tab>
+    </van-tabs>
+    <text>订单中心</text>
+    <view wx:for="{{ orders }}" wx:key="{{ item.orderId }}">
+        <text>下单时间：{{ item.time }}</text>
+    </view>
+</view>

@@ -1,0 +1,30 @@
+/* components/area.wxss */
+.btn {
+    display: flex;
+    height: 50px;
+    padding: 0 20rpx;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn label {
+    width: 90px;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    color: #2db6dd;
+}
+.btn label:active{
+    background-color: #e1e1e1;
+}
+picker-view picker-view-column:nth-child(1) {
+    flex-flow: 2.6;
+}
+picker-view picker-view-column:nth-child(2) {
+    flex-grow: 1.1;
+}
+picker-view picker-view-column:nth-child(3) {
+    flex-grow: 2;
+}
+picker-view-column view {
+    text-align: center;
+}

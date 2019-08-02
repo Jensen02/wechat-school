@@ -1,0 +1,42 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
+.body-view {
+    width: 100%;
+}
+.body-slider {
+    width: 100%;
+}
+.user-info {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 20rpx 0 20rpx 20rpx;
+    align-items: center;
+}
+.user-image {
+    width: 120rpx;
+    height: 120rpx;
+    margin-right: 30rpx;
+    border-radius: 50%;
+}
+.save-btn {
+    width: 90%;
+    margin-top: 300rpx;
+}
+.every-info {
+    background-color: aquamarine;
+}
+.van-area .van-picker__frame {
+  position: absolute !important;
+}
+.title {
+    max-width: 70px;
+}
+
